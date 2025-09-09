@@ -3,6 +3,7 @@ import GridContainer from "../defaults/GridContainer";
 import SideBar from "../components/nav/SideBar";
 import NavBar from "../components/nav/NavBar";
 import MaxWidthWrapper from "../defaults/MaxWidthWrapper";
+import ButtonGradient from "../components/nav/ButtonGradient";
 
 export default function RootLayout({
   children,
@@ -11,6 +12,7 @@ export default function RootLayout({
 }>) {
   return (
     <main className="h-screen text-black ">
+      <ButtonGradient/>
       <GridContainer col={12}>
         <SideBar/>
         <MaxWidthWrapper  className="col-span-full  lg:col-span-10">

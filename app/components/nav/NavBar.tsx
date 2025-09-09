@@ -7,7 +7,7 @@ const NavBar = () => {
   <nav>
     <header className='flex justify-between items-center'>
       <Search/>
-      <div className='flx items-center gap-2'>
+      <div className='flex items-center gap-2'>
        <ButtonGame text='login'/>
        <ButtonGame text='sign up'/>
       </div>
