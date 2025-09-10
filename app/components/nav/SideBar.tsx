@@ -23,7 +23,7 @@ export const NAV_LINKS = [
   },
   {
     link: "/wishlist",
-    label: "WIshlist",
+    label: "Wishlist",
     icon: <FaHeart />,
   },
   {

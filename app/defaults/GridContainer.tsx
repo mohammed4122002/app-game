@@ -3,9 +3,11 @@ import React, { ReactNode } from "react";
 const GridContainer = ({
   col,
   children,
+  className,
 }: {
   col: number;
   children: ReactNode;
+  className?: string;
 }) => {
   const gridClasses: { [key: number]: string } = {
     1: "grid grid-cols-1",
@@ -21,10 +23,7 @@ const GridContainer = ({
     11: "grid grid-cols-11",
     12: "grid grid-cols-12",
   };
-  const classes = `grid-cols-${col}`;
-  console.log(gridClasses[Number(col)], classes);
-  
-  return <div className={`h-screen ${gridClasses[col]}`}>{children}</div>;
+  return <div className={`h-screen ${gridClasses[col]} ${className || ""}`}>{children}</div>;
 };
 
 export default GridContainer;

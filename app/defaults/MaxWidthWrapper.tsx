@@ -3,7 +3,7 @@ import React, { ReactNode } from 'react'
 
 const MaxWidthWrapper = ({children, className, noPadding}: {children: ReactNode, className?: string, noPadding?: boolean}) => {
   return (
-    <section className={cn("max-w-[1375px] mx-auto w-full py", className || "", {"py-0": noPadding}, {"py-8": !noPadding})}>{children}</section>
+    <section className={cn("max-w-[1375px] mx-auto w-full", className || "", {"py-0": noPadding}, {"py-8": !noPadding})}>{children}</section>
   )
 }
 
