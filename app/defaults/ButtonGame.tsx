@@ -7,7 +7,7 @@ const ButtonGame = ({className , onClick , link , text , icon , disabled=false}:
   return (
    <button
    disabled={disabled}
-    className={`${className || ""} relative px-6 m-auto flex-initial gap-2 py-2 text-white`}
+    className={`${className || ""} cursor-pointer relative px-6 m-auto flex-initial gap-2 py-2 text-white`}
     onClick={onClick }
    >
     {ButtonSvg(false)}

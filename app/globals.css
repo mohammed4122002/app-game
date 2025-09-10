@@ -4,7 +4,7 @@
 @custom-variant dark (&:is(.dark *));
 .background {
   background: rgb(220, 21, 141);
-  background: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #7b96d5, #6090c6, #4989b5, #26718d, #0f5867, #083f43, #072725);
+  background: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #9073c2, #9a9ae1, #7b96d5, #4d83c1, #4989b5, #26718d, #0f5867, #083f43, #072725);
 }
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
