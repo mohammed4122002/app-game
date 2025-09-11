@@ -1,5 +1,4 @@
 import React from "react";
-import MaxWidthWrapper from "./defaults/MaxWidthWrapper";
 import SwiperCards from "./SwiperCards";
 import "swiper/css";
 import Image from "next/image";
@@ -7,7 +6,7 @@ import CardInfo from "./CardInfo";
 
 const Hero = () => {
   return (
-    <div className=" h-full mt-8">
+    <div className=" w-full h-full mt-20">
       <SwiperCards
         className=" h-[30rem]"
         paginationImages

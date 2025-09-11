@@ -11,7 +11,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <main className="h-screen text-black ">
+    <main className="h-screen text-black">
       <ButtonGradient/>
       <GridContainer col={12}>
         <SideBar/>

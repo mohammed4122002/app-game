@@ -1,9 +1,7 @@
 import React from 'react'
 
-const page = () => {
+export default function GamesPage() {
   return (
     <div>page games</div>
   )
 }
-
-export default page

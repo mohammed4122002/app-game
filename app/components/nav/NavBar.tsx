@@ -4,8 +4,8 @@ import ButtonGame from '@/app/defaults/ButtonGame'
 
 const NavBar = () => {
   return (
-  <nav>
-    <header className='flex justify-between items-center gap-4'>
+  <nav aria-label="Primary">
+    <header className='flex justify-between items-center gap-4 mt-5'>
       <Search/>
       <div className='flex items-center gap-2'>
        <ButtonGame text='Log in' link='/login'/>

@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React, { ReactElement, ReactNode, useEffect, useState } from "react";
+import React, {useEffect, useState } from "react";
 import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import type SwiperType from "swiper";
@@ -17,19 +17,23 @@ const SwiperCards = ({
   className?: string;
   slidesPerView?: number;
 }) => {
-  const [swiper, setSwiper] = useState<SwiperType | null>();
-  const [progress, setProgress] = useState(0); //initial value for progress
+  const [swiper, setSwiper] = useState<SwiperType | null>(null);
+  const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    const t = setInterval(() => {
+    const intervalId = setInterval(() => {
       setProgress((prev) => (prev >= 100 ? 100 : prev + 3.7));
     }, 110);
-    return () => clearInterval(t);
-  }, [progress]);
+    return () => clearInterval(intervalId);
+  }, []);
+
   useEffect(() => {
-    swiper?.on("slideChange", () => {
-      setProgress(0);
-    });
+    if (!swiper) return;
+    const handleSlideChange = () => setProgress(0);
+    swiper.on("slideChange", handleSlideChange);
+    return () => {
+      swiper.off("slideChange", handleSlideChange);
+    };
   }, [swiper]);
 
   return (

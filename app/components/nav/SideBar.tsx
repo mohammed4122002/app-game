@@ -36,7 +36,7 @@ export const NAV_LINKS = [
 const SideBar = () => {
   return (
     <div className=" col-span-2   ">
-      <div className="h-screen  sticky inset-0 py-5 px-10 flex flex-col items-start bg-black/30 text-gray-50">
+      <div className="h-screen  sticky inset-0 py-5 px-10 flex flex-col items-start bg-black/30  text-gray-50">
         <Logo />
         {NAV_LINKS.map((navLink) => (
           <NavLink key={navLink.link} navLink={navLink} />
