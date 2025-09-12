@@ -13,7 +13,7 @@ export default async function Home() {
       <Hero />
       {games && (
         <div className="px-4 sm:px-6 lg:px-8 mt-10">
-          <SectionTitle title="Popular Games" className="mb-6" />
+          <SectionTitle title="Popular Games" className="mb-6" subtitle="Discover the most popular games this month" />
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
             {games.map((game: Game) => (
               <GameCard key={game.id} game={game} />
