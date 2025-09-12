@@ -14,6 +14,9 @@
     rgba(220, 21, 141, 1) 100%,
     rgba(120, 18, 87, 1) 100%
   );
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 @theme inline {

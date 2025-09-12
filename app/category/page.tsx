@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { getGenres } from "@/app/api/api";
+import SectionTitle from "@/app/components/SectionTitle";
 
 export default async function CategoriesPage() {
   const data = await getGenres();
@@ -8,7 +9,7 @@ export default async function CategoriesPage() {
 
   return (
     <main className="px-3 sm:px-6 lg:px-8 mt-8 sm:mt-10">
-      <h1 className="text-xl sm:text-2xl font-bold text-white mb-4 sm:mb-6">Categories</h1>
+      <SectionTitle title="Categories" className="mb-4 sm:mb-6" />
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 sm:gap-4">
         {genres.map((g: { id: number; name: string; image_background?: string; games_count?: number }) => (
           <Link key={g.id} href={`/category/${g.id}`} className="group relative overflow-hidden rounded-2xl bg-white/5 ring-1 ring-white/10 hover:ring-white/20 transition">
