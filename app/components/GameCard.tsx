@@ -12,7 +12,7 @@ const GameCard = ({ game }: { game: Game }) => {
     >
       <div className="absolute -inset-0.5 bg-gradient-to-br from-fuchsia-600/0 via-rose-500/0 to-purple-600/0 group-hover:from-fuchsia-600/20 group-hover:via-rose-500/10 group-hover:to-purple-600/20 blur-xl opacity-0 group-hover:opacity-100 transition duration-500" />
 
-      <div className="relative aspect-[16/9]">
+      <div className="relative aspect-[16/9] overflow-hidden">
         {game.background_image ? (
           <Image
             src={game.background_image}
