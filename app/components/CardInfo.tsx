@@ -21,14 +21,14 @@ const CardInfo = ({
     <MotionItem
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0, transition: { duration: 1 } }}
-      className=" flex flex-col items-start absolute left-20 top-20 max-w-md"
+      className=" flex flex-col items-start absolute left-4 right-4 top-6 sm:left-10 sm:right-auto sm:top-14 md:left-16 md:top-16 max-w-md"
     >
-      <div className=" w-96 h-40 relative">
+      <div className=" w-56 h-24 sm:w-72 sm:h-28 md:w-80 md:h-32 lg:w-96 lg:h-40 relative">
         <Image src={image} fill alt={`${title}`} className=" object-contain" />
       </div>
-      <h1 className=" text-white text-2xl font-semibold ">{title}</h1>
-      <p className=" text-base  text-gray-200">{desc}</p>
-      <Button className={`rounded-full mt-5 ${btnClasses || " text-gray-50"}`}>{textBtn || "Find out more !"}</Button>
+      <h1 className=" text-white text-lg sm:text-xl md:text-2xl font-semibold ">{title}</h1>
+      <p className=" text-sm sm:text-base text-gray-200 max-w-lg">{desc}</p>
+      <Button className={`rounded-full mt-3 sm:mt-5 ${btnClasses || " text-gray-50"}`}>{textBtn || "Find out more !"}</Button>
     </MotionItem>
   );
 };

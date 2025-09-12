@@ -39,9 +39,9 @@ const SwiperCards = ({
   return (
     <div className="relative h-full gap-3 w-full flex flex-col">
       <Swiper
-        autoplay={{ delay: 3000 }}
+        autoplay={{ delay: 3500, disableOnInteraction: false }}
         modules={[Autoplay]}
-        spaceBetween={20}
+        spaceBetween={16}
         slidesPerView={slidesPerView || 1}
         className={` w-full relative ${className || " h-96"}`}
         onSlideChange={() => console.log("slide change")}
@@ -51,7 +51,7 @@ const SwiperCards = ({
           <SwiperSlide key={i}>{card}</SwiperSlide>
         ))}
       </Swiper>
-      <div className=" flex items-center gap-4">
+      <div className=" hidden md:flex items-center gap-4">
         {paginationImages &&
           items.map(({ src }, i) => (
             <div
@@ -61,8 +61,8 @@ const SwiperCards = ({
               }}
               key={i}
               className={`${
-                swiper?.realIndex === i && " shadow-md  -translate-y-5 border-rose-500 border opacity-90"
-              } cursor-pointer hover:-translate-y-5 z-10  hover:shadow-md hover:opacity-90 duration-200 rounded-xl overflow-hidden max-w-lg w-full h-40 relative`}
+                swiper?.realIndex === i && " shadow-md  -translate-y-3 border-rose-500 border opacity-90"
+              } cursor-pointer hover:-translate-y-3 z-10  hover:shadow-md hover:opacity-90 duration-200 rounded-xl overflow-hidden max-w-lg w-full h-32 lg:h-40 relative`}
             >
               {swiper?.realIndex === i && swiper.autoplay.running && (
                 <div

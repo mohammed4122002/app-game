@@ -6,9 +6,9 @@ import CardInfo from "./CardInfo";
 
 const Hero = () => {
   return (
-    <div className=" w-full h-full mt-20">
+    <div className=" w-full h-full mt-10 sm:mt-16 lg:mt-20">
       <SwiperCards
-        className=" h-[30rem]"
+        className=" h-[18rem] sm:h-[22rem] md:h-[28rem] lg:h-[32rem]"
         paginationImages
         items={[
           {
