@@ -8,12 +8,14 @@ const Hero = () => {
   return (
     <div className=" w-full h-full mt-10 sm:mt-16 lg:mt-20">
       <SwiperCards
-        className=" h-[18rem] sm:h-[22rem] md:h-[28rem] lg:h-[32rem]"
+        className=" h-[20rem] sm:h-[26rem] md:h-[32rem] lg:h-[36rem]"
         paginationImages
         items={[
           {
             card: (
               <div className=" flex items-start justify-start w-full h-full relative">
+                <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/10 to-black/60" />
+                <div className="pointer-events-none absolute inset-0 shadow-[inset_0_-120px_160px_-80px_rgba(0,0,0,0.7)]" />
                 <video
                   className=" absolute w-full h-full object-cover rounded-2xl  inset-0"
                   autoPlay={true}
@@ -35,6 +37,8 @@ const Hero = () => {
           {
             card: (
               <div className=" w-full h-full relative">
+                <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/10 to-black/60" />
+                <div className="pointer-events-none absolute inset-0 shadow-[inset_0_-120px_160px_-80px_rgba(0,0,0,0.7)]" />
                 <video
                   className=" absolute w-full h-full object-cover object-top rounded-2xl  inset-0"
                   autoPlay={true}
@@ -56,6 +60,8 @@ const Hero = () => {
           {
             card: (
               <div className=" w-full h-full relative">
+                <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/10 to-black/60" />
+                <div className="pointer-events-none absolute inset-0 shadow-[inset_0_-120px_160px_-80px_rgba(0,0,0,0.7)]" />
                 <Image
                   src="/Dragon-Ball-Sparking-Zero-Hero-desktop-01-03oct24.webp"
                   alt="Dragon Ball Sparking Zero Hero desktop 01 03oct24"
@@ -75,6 +81,8 @@ const Hero = () => {
           {
             card: (
               <div className=" flex items-start justify-start w-full h-full relative">
+                <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/10 to-black/60" />
+                <div className="pointer-events-none absolute inset-0 shadow-[inset_0_-120px_160px_-80px_rgba(0,0,0,0.7)]" />
                 <video
                   className=" absolute w-full h-full object-cover rounded-2xl  inset-0"
                   autoPlay={true}

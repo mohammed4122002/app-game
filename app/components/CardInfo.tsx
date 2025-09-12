@@ -26,9 +26,11 @@ const CardInfo = ({
       <div className=" w-56 h-24 sm:w-72 sm:h-28 md:w-80 md:h-32 lg:w-96 lg:h-40 relative">
         <Image src={image} fill alt={`${title}`} className=" object-contain" />
       </div>
-      <h1 className=" text-white text-lg sm:text-xl md:text-2xl font-semibold ">{title}</h1>
-      <p className=" text-sm sm:text-base text-gray-200 max-w-lg">{desc}</p>
-      <Button className={`rounded-full mt-3 sm:mt-5 ${btnClasses || " text-gray-50"}`}>{textBtn || "Find out more !"}</Button>
+      <div className="mt-2 bg-black/35 backdrop-blur-md border border-white/15 rounded-2xl p-4 sm:p-5 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.6)]">
+        <h1 className=" text-white text-lg sm:text-xl md:text-2xl font-semibold ">{title}</h1>
+        <p className=" text-sm sm:text-base text-gray-200 max-w-lg">{desc}</p>
+        <Button className={`rounded-full mt-3 sm:mt-5 ${btnClasses || " text-gray-50"}`}>{textBtn || "Find out more !"}</Button>
+      </div>
     </MotionItem>
   );
 };
