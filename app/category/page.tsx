@@ -12,7 +12,7 @@ export default async function CategoriesPage() {
       <SectionTitle title="Categories" className="mb-4 sm:mb-6" />
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 sm:gap-4">
         {genres.map((g: { id: number; name: string; image_background?: string; games_count?: number }) => (
-          <Link key={g.id} href={`/category/${g.id}`} className="group relative overflow-hidden rounded-2xl bg-white/5 ring-1 ring-white/10 hover:ring-white/20 transition">
+          <Link key={g.id} href={`/category/${g.id}?name=${encodeURIComponent(g.name)}`} className="group relative overflow-hidden rounded-2xl bg-white/5 ring-1 ring-white/10 hover:ring-white/20 transition">
             <div className="relative aspect-[16/9]">
               {g.image_background ? (
                 <Image src={g.image_background} alt={g.name} fill sizes="(max-width:768px) 100vw, 20vw" className="object-cover group-hover:scale-105 transition" />
